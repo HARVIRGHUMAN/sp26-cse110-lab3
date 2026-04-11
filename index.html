@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSE 110 Lab 2 - Meeting Minutes</title>
+    <link rel="icon" type="image/png" href="screenshots/favicon.png">
+</head>
+<body>
+    <header>
+        <h1>CSE 110 Project: Meeting Minutes</h1>
+        <h3>Date : April 11, 2026</h3>
+        <nav>
+            <b>Quick Links:</b>
+            <div>
+                <a href="#attendance">Attendance</a> |
+                <a href="#agenda">Agenda</a> |
+                <a href="#media">Media</a> |
+                <a href="#survey">Team Survey</a>
+            </div>
+        </nav>
+    </header>
+    <hr>
+
+    <main>
+        <section id="attendance">
+            <h2>Attendance List</h2>
+            <ul>
+                <li><strong>Harvir Ghuman</strong></li>
+                <li><i>Lebron James</i></li>
+                <li><em>Sidhu Moose Wala</em></li>
+                <li>George Washington</li>
+            </ul>
+        </section>
+
+        <section id="agenda">
+            <h2>Agenda</h2>
+            <ol>
+                <li>Review last week's unfinished business</li>
+                <li>Assign roles and responsibilities</li>
+                <li>Discuss timeline and milestones</li>
+                <li>Address any questions or concerns</li>
+            </ol>
+        </section>
+
+        <section id="updates">
+            <h2>Unfinished Business From Last Week</h2>
+            <p>We still need to <span>split</span> and assign tasks to team members </p> 
+        </section>
+
+        <section>
+            <h2>Talk About:</h2>
+            <p>Project Timeline, Pairings, and Group Bonding  </p>
+            <details>
+                <summary><b>Click to view other concerns</b></summary>
+                <p>The team is worried about the group bonding not going well</p>
+            </details>
+        </section>
+
+    </main>
+
+    <section id="media">
+        <h2>Media</h2>
+        <p>Whiteboard Diagram:</p>
+        <img src="screenshots/whiteboard.PNG" alt="Whiteboard Diagram" width="400">
+
+        <p>Audio Recording:</p>
+        <audio controls>
+            <source src="screenshots/audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <p>Video:</p>
+        <video width="400" controls>
+            <source src="screenshots/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+    
+    <hr>
+    <footer>
+        <section id="survey">
+            <h2>Team Survey</h2>
+            <form>
+                <fieldset>
+                    <legend>General Info</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+
+                    <label for="date">Meeting Date:</label>
+                    <input type="date" id="date"><br><br>
+
+                    <label>How was the meeting?</label>
+                    <input type="radio" name="mood" value="good"> Good
+                    <input type="radio" name="mood" value="bad"> Bad
+                    <input type="radio" name="mood" value="neutral"> Neutral <br><br>
+
+                    <label>Check what you liked:</label>
+                    <input type="checkbox"> The snacks
+                    <input type="checkbox"> The discussion
+                    <input type="checkbox"> The code <br><br>
+
+                    <label>Favorite Tool:</label>
+                    <input list="tools" name="tool">
+                    <datalist id="tools">
+                        <option value="Zoom">
+                        <option value="Google Meet">
+                        <option value="Microsoft Teams">
+                    </datalist><br><br>
+
+                    <label for="preferred-role">Preferred Team Role:</label>
+                    <select id="preferred-role" name="preferred-role">
+                        <option value="developer">Developer</option>
+                        <option value="designer">Designer</option>
+                        <option value="manager">Manager</option>
+                    </select> 
+                    <br><br>
+
+                    <label>Detailed Feedback:</label>
+                    <textarea rows="2" cols="100"></textarea> <br>
+                </fieldset> <br>
+                <button type="submit">Submit Survey</button> <br>
+            </form>
+        </section>
+    </footer>
+</body>
+</html>
