@@ -1,2 +1,2 @@
-# Lab 2 - Starter
-[https://harvirghuman.github.io/Lab2_Starter/](https://harvirghuman.github.io/Lab2_Starter/)
+# Lab 3
+[https://harvirghuman.github.io/sp26-cse110-lab3/](https://harvirghuman.github.io/sp26-cse110-lab3/)
