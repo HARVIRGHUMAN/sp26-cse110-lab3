@@ -1,0 +1,247 @@
+
+/* CSS Variable with Fallback */
+:root {
+    --primary-bg: #f4f7f6;
+    --accent-color: #006D77; /* Fallback used below */
+}
+
+/* Universal Selector */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element Selector & 3rd Party Font */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--primary-bg, #ffffff); /* Variable with fallback */
+    color: color-mix(in srgb, var(--accent-color), black 20%); /* color-mix usage */
+    
+    /* Centering the entire page */
+    margin: 0 auto; /* Auto margin requirement */
+    width: 95%;
+    max-width: 900px; /* Sizing requirement */
+    min-width: 320px;
+    min-height: 100vh;
+    
+    /* Absolute Units (3 unique: px, pt, in) */
+    font-size: 12pt;
+    border-top: 0.05in solid #333; 
+    padding-top: 20px;
+
+    /* Relative Units (3 unique: %, rem, vh) */
+    line-height: 1.6rem;
+}
+
+/* BOX MODEL (Long and Short hand requirements) */
+
+/* Apply card layout with Shadows to all major sections */
+header, main section, footer {
+    background-color: #FFF; /* Hex color */
+    
+    /* The Shadow! (RGBa requirement) */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); 
+    
+    /* Borders Long Hand */
+    border-style: solid;
+    border-color: #e0e0e0;
+    border-width: 1px;
+    border-radius: 12px;
+    
+    /* Margin Long Hand */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    /* Padding Long Hand */
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+header {
+    /* Text requirement: Alignment */
+    text-align: center; 
+    
+    /* Margin Short Hand */
+    margin: 15px auto; 
+}
+
+/* LAYOUTS: FLEXBOX */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centers the links */
+    align-items: center;
+    gap: 20px; 
+    background-color: rgb(240, 248, 248); /* RGB color */
+    
+    /* Padding Short Hand */
+    padding: 10px 20px 10px 20px;
+    
+    /* Borders Short Hand */
+    border: 1px dashed gray;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* LAYOUTS: GRID */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    align-items: center; 
+    list-style: none;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+/* TEXT & COLORS */
+h2 {
+    color: hsl(180, 50%, 30%); /* HSL color */
+    text-decoration: underline; /* Text requirement */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Selector List */
+h1, h3 {
+    color: var(--accent-color);
+    margin-bottom: 10px;
+}
+
+/* SELECTORS & COMBINATORS */
+
+/* ID Selector */
+#attendance {
+    background-color: rgba(0, 109, 119, 0.03); 
+}
+
+/* Class Selector */
+.info-section {
+    position: relative; /* Position 1 */
+}
+
+/* Attribute Selector */
+input[type="text"] {
+    border: 1px solid blue;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+/* Descendant Combinator */
+main section {
+    overflow: hidden; 
+}
+
+/* Child Combinator */
+nav > div {
+    font-size: 0.95rem;
+}
+
+/* Adjacent Sibling Combinator */
+h2 + p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* General Sibling Combinator */
+header ~ hr {
+    display: none; /* Display value: none */
+}
+
+/* Combining Two Selectors (element.class) */
+button.submit-btn {
+    background-color: color(display-p3 0.1 0.5 0.2); /* Wider-gamut color */
+    color: white; /* Color name */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Pseudo-class: Hover and Active */
+button.submit-btn:hover {
+    background-color: darkgreen;
+}
+
+button.submit-btn:active {
+    transform: scale(0.98);
+    background-color: lightgreen;
+}
+
+/* NEW 2023 SELECTORS */
+
+/* :has() selector - styles a section only if it contains a 'details' element */
+section:has(details) {
+    border-left: 6px solid orange; /* Highlight border */
+}
+
+/* Nested Selectors (2023 syntax) */
+.media-item {
+    background: #fdfdfd;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    
+    & p {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    & img, & video {
+        display: block; /* Display value: block */
+        max-width: 100%;
+        height: auto;
+        border-radius: 4px;
+    }
+    & audio {
+        width: 100%;
+    }
+}
+
+/* Display: inline-block experiment */
+nav a {
+    display: inline-block; /* Display value: inline-block */
+    padding: 5px 10px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* 8. SIZING & POSITIONING */
+footer {
+    position: static; /* Position 2 */
+}
+
+/* 9. RESPONSIVENESS (Media Queries) */
+@media (max-width: 600px) {
+    /* Reflow for Mobile */
+    .grid-container, .media-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    body {
+        font-size: 14px;
+        width: 100%; /* Take up more screen space on small devices */
+    }
+    
+    header, main section, footer {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
