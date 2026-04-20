@@ -4,18 +4,30 @@
     <meta charset="UTF-8">
     <title>CSE 110 Lab 2 - Meeting Minutes</title>
     <link rel="icon" type="image/png" href="screenshots/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        h1 {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>CSE 110: Meeting Minutes</h1>
         <h2>Topic: Initial Brainstorming and Setup</h2>
         <h3>Date : April 11, 2026</h3>
-        <nav>
+        <nav class="main-nav">
             <b>Quick Links:</b>
-            <div>
-                <a href="#attendance">Attendance</a> |
-                <a href="#agenda">Agenda</a> |
-                <a href="#media">Media</a> |
+            <div class="flex-container">
+                <a href="#attendance">Attendance</a>
+                <a href="#agenda">Agenda</a>
+                <a href="#media">Media</a>
                 <a href="#survey">Team Survey</a>
             </div>
         </nav>
@@ -25,7 +37,7 @@
     <main>
         <section id="attendance">
             <h2>Attendance List</h2>
-            <ul>
+            <ul class="grid-container">
                 <li><strong>Harvir Ghuman</strong></li>
                 <li><i>Lebron James</i></li>
                 <li><em>Sidhu Moose Wala</em></li>
@@ -45,10 +57,10 @@
 
         <section id="updates">
             <h2>Unfinished Business From Last Week</h2>
-            <p>We still need to <span>split</span> and assign tasks to team members </p> 
+            <p>We still need to <span style="color: crimson; font-weight: bold;">split</span> and assign tasks to team members </p> 
         </section>
 
-        <section>
+        <section class="info-section">
             <h2>Talk About:</h2>
             <p>Project Timeline, Pairings, and Group Bonding  </p>
             <details>
@@ -58,25 +70,29 @@
         </section>
 
         <section id="media">
-        <h2>Media</h2>
-        <p>Whiteboard Diagram:</p>
-        <img src="screenshots/whiteboard.PNG" alt="Whiteboard Diagram" width="400">
+            <h2>Media</h2>
+            <div class="media-grid">
+                <div class="media-item">
+                    <p>Whiteboard Diagram:</p>
+                    <img src="screenshots/whiteboard.PNG" alt="Whiteboard Diagram" width="400">
+                </div>
 
-        <p>Audio Recording:</p>
-        <audio controls>
-            <source src="screenshots/audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <p>Video:</p>
-        <video width="400" controls>
-            <source src="screenshots/video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
+                <div class="media-item">
+                    <p>Audio Recording:</p>
+                    <audio controls>
+                        <source src="screenshots/audio.mp3" type="audio/mpeg">
+                    </audio>
+                </div>
+                
+                <div class="media-item">
+                    <p>Video:</p>
+                    <video width="400" controls>
+                        <source src="screenshots/video.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
         </section>
-
     </main>
-
-    
     
     <hr>
     <footer>
@@ -92,10 +108,12 @@
                     <label for="date">Meeting Date:</label>
                     <input type="date" id="date"><br><br>
 
-                    <label>How was the meeting?</label>
-                    <input type="radio" name="mood" value="good"> Good
-                    <input type="radio" name="mood" value="bad"> Bad
-                    <input type="radio" name="mood" value="neutral"> Neutral <br><br>
+                    <div class="radio-group">
+                        <label>How was the meeting?</label>
+                        <input type="radio" name="mood" value="good"> Good
+                        <input type="radio" name="mood" value="bad"> Bad
+                        <input type="radio" name="mood" value="neutral"> Neutral
+                    </div><br>
 
                     <label>Check what you liked:</label>
                     <input type="checkbox"> The snacks
@@ -121,7 +139,7 @@
                     <label>Detailed Feedback:</label>
                     <textarea rows="2" cols="100"></textarea> <br>
                 </fieldset> <br>
-                <button type="submit">Submit Survey</button> <br>
+                <button type="submit" class="submit-btn">Submit Survey</button> <br>
             </form>
         </section>
     </footer>
